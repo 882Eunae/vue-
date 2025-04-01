@@ -9,16 +9,22 @@
 import PropsCom from './components/PropsComponents.vue';
 import PageTitle from './components/PageTitle.vue';
 import TextModal from './views/TextModal.vue';
+import PropsTest from './components/PropsTest.vue';
+import RefTest from './components/RefTest.vue';
+import Modal from './views/Modal.vue';
 export default {
   data() {
     return {
-      selected: 'PropsCom'
+      selected: 'TextModal'
     };
   },
   components: {
    PropsCom, //'PropsCom':PropsCom
-   PageTitle,
+   //PageTitle,
    TextModal,
+   Modal,
+   //PropsTest,
+   //RefTest,
   },
   created(){
     console.log('App.vue Created'); 

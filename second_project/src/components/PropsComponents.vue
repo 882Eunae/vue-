@@ -22,13 +22,14 @@
       <input type="number" v-model="num">
       <button @click="childHandler">자식제어</button>
     </label>
+    <TextModal></TextModal>
 </template>
 
 <script>
 import PageTitle from './PageTitle.vue'; //자식
 import PageContent from './PageContent.vue';
 import RefComponent from './RefComponent.vue';
-
+import TextModal from '@/views/TextModal.vue';
 export default{
   data(){
     return{
@@ -47,6 +48,7 @@ export default{
     PageTitle, //자식 컴포넌트 등록 
     PageContent,
     RefComponent,
+    TextModal,
   },
   created(){
     console.log('PropsComponents Created'); 
@@ -63,7 +65,8 @@ export default{
     },
     childHandler(){
       // 1) 자식 컴포넌트의 함수 직접호출 
-      this.$refs.child.plusCount(); 
+      this.$refs.child.plusCount();
+
       let RefCom=this.$refs.child; 
       RefCom.$refs.btn.click(); 
     }

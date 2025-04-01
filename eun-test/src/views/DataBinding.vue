@@ -9,7 +9,6 @@
     <p v-html="tagList"></p>
     <p v-text="tagList" v-bind:name="tagName"></p>
     <!--v-bind 디렉티브 : 단방향 바인딩-->
-   
      <input type="text" v-model="valueModel">  <!-- v-model 디렉티브: 양방향 바인딩 -->
      <p>{{ valueModel+1000 }},{{ typeof valueModel }}</p>
      <input type="number" v-model.lazy="numberModel">
@@ -38,4 +37,4 @@ export default{
 </script>
 <style>
 /*css*/ 
-</style>M
+</style>
