@@ -1,14 +1,32 @@
 <template>
- <div>
-  <input type="text" v-model.lazy="selected">
-  <component v-bind:is="selected"></component>
- </div>
+  <div>
+    <input type="text" v-model.lazy="selected">
+    <component v-bind:is="selected"></component>
+  </div>
 </template>
+
 <script>
-import PropsComponents from './components/PropsComponents.vue';
-
-
-
+import PropsCom from './components/PropsComponents.vue';
+import PageTitle from './components/PageTitle.vue';
+import TextModal from './views/TextModal.vue';
+export default {
+  data() {
+    return {
+      selected: 'PropsCom'
+    };
+  },
+  components: {
+   PropsCom, //'PropsCom':PropsCom
+   PageTitle,
+   TextModal,
+  },
+  created(){
+    console.log('App.vue Created'); 
+  },
+  mounted(){
+    console.log('App.vue Mounted');
+  }
+}
 </script>
 
 <style>
@@ -19,7 +37,6 @@ import PropsComponents from './components/PropsComponents.vue';
   text-align: center;
   color: #2c3e50;
 }
-
 nav {
   padding: 30px;
 }
