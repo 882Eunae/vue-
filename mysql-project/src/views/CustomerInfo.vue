@@ -7,7 +7,7 @@
 <div class="row" >
   <div class="row">
     <div class="col-4">아이디</div>
-  <div class="col-8">{{ customer.id }}</div>
+    <div class="col-8">{{ customer.id }}</div>
   </div>
 </div>
 <div class="row" >
