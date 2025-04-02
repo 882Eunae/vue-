@@ -18,5 +18,4 @@
   max-width: 40em;
   padding: 2em;
 }
-
 </style>
